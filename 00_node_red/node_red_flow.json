@@ -1,0 +1,625 @@
+[
+    {
+        "id": "e4d2bd2ceb0aef03",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e567094305c9d837",
+        "type": "serial-port",
+        "serialport": "COM11",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "{",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "}",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "8ec1fdab19e4f532",
+        "type": "ui_tab",
+        "name": "80C257 EPROM Reader",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "1a4d9068df6420b8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#dd0000",
+                "baseFont": "Century Gothic,CenturyGothic,AppleGothic,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#dd0000",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#dd0000",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#ff2a2a",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#dd0000",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Century Gothic,CenturyGothic,AppleGothic,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "80C257 EPROM Reader",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "efd0843d5269ec0d",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "8ec1fdab19e4f532",
+        "order": 2,
+        "disp": false,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0589f3d2aacf4aac",
+        "type": "ui_group",
+        "name": "Button",
+        "tab": "8ec1fdab19e4f532",
+        "order": 1,
+        "disp": false,
+        "width": 4,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "10c502b2e1871e63",
+        "type": "ui_spacer",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "spacer",
+        "group": "efd0843d5269ec0d",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ba7d4ba92c52a80f",
+        "type": "ui_spacer",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "spacer",
+        "group": "efd0843d5269ec0d",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2eed74a86aa5a742",
+        "type": "json",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "string > json_object converter",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "6c532b6920d36baa",
+                "959c35406684876d",
+                "43fe2aa054e72724",
+                "76523a4ff5eaa218",
+                "7dc15c058dd34008",
+                "e5c33f5147eec3a9"
+            ]
+        ]
+    },
+    {
+        "id": "10590a1b47fba99a",
+        "type": "ui_button",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "full_reading",
+        "group": "0589f3d2aacf4aac",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "full reading",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.full_reading}}",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 870,
+        "y": 520,
+        "wires": [
+            [
+                "692fef836f948bc8"
+            ]
+        ]
+    },
+    {
+        "id": "692fef836f948bc8",
+        "type": "function",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "json message serializer",
+        "func": "if(flow.get(\"start_validation\"))\n{\nmsg.payload = \"{\\\"command\\\":\"+msg.payload+\",\\\"adress_min\\\":\"+flow.get(\"adress_min\")+\",\\\"adress_max\\\":\"+flow.get(\"adress_max\")+\",\\\"status\\\":0,\\\"adress\\\":0,\\\"data\\\":0}\"\nreturn msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 560,
+        "wires": [
+            [
+                "059cb3fb83c44303",
+                "cb32e0deb61fe20c"
+            ]
+        ]
+    },
+    {
+        "id": "6c532b6920d36baa",
+        "type": "ui_text",
+        "z": "e4d2bd2ceb0aef03",
+        "group": "efd0843d5269ec0d",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "adress",
+        "label": "Eprom adress :",
+        "format": "{{msg.payload.adress}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 750,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "959c35406684876d",
+        "type": "ui_text",
+        "z": "e4d2bd2ceb0aef03",
+        "group": "efd0843d5269ec0d",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "name": "data",
+        "label": "Eprom data : ",
+        "format": "{{msg.payload.data}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 750,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "43fe2aa054e72724",
+        "type": "ui_numeric",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "adress_min",
+        "label": "Adress start :",
+        "tooltip": "",
+        "group": "efd0843d5269ec0d",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "wrap": true,
+        "passthru": true,
+        "topic": "adress_min",
+        "topicType": "msg",
+        "format": "{{msg.payload.adress_min}}",
+        "min": 0,
+        "max": "33000",
+        "step": 1,
+        "className": "",
+        "x": 770,
+        "y": 240,
+        "wires": [
+            [
+                "829e4de195a9e22f"
+            ]
+        ]
+    },
+    {
+        "id": "76523a4ff5eaa218",
+        "type": "ui_numeric",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "adress_max",
+        "label": "Adress stop : ",
+        "tooltip": "",
+        "group": "efd0843d5269ec0d",
+        "order": 6,
+        "width": 5,
+        "height": 1,
+        "wrap": true,
+        "passthru": true,
+        "topic": "adress_max",
+        "topicType": "msg",
+        "format": "{{msg.payload.adress_max}}",
+        "min": 0,
+        "max": "33000",
+        "step": 1,
+        "className": "",
+        "x": 770,
+        "y": 280,
+        "wires": [
+            [
+                "ee63920251f3bfb8"
+            ]
+        ]
+    },
+    {
+        "id": "059cb3fb83c44303",
+        "type": "debug",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "debug_output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "3a81aab28757e42e",
+        "type": "ui_button",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "partial_reading",
+        "group": "0589f3d2aacf4aac",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "partial reading",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.partial_reading}}",
+        "className": "",
+        "icon": "",
+        "payload": "2",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 880,
+        "y": 560,
+        "wires": [
+            [
+                "692fef836f948bc8"
+            ]
+        ]
+    },
+    {
+        "id": "d3f5e72272a97ccb",
+        "type": "ui_button",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "reset",
+        "group": "0589f3d2aacf4aac",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.reset}}",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 850,
+        "y": 600,
+        "wires": [
+            [
+                "692fef836f948bc8"
+            ]
+        ]
+    },
+    {
+        "id": "7dc15c058dd34008",
+        "type": "function",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "ui function",
+        "func": "switch (msg.payload.status) \n{\n    case 0:\n    msg.payload = \"Stand by\";\n    msg.status = \"grey\";\n    msg.reset = \"grey\";\n    msg.partial_reading = \"blue\";\n    msg.full_reading = \"blue\";\n    msg.start_validation = true;\n    break;\n    case 1:\n    msg.payload = \"Reading\";\n    msg.status = \"orange\";\n    msg.reset = \"grey\";\n    msg.partial_reading = \"grey\";\n    msg.full_reading = \"grey\";\n    msg.start_validation = false;\n    break;\n    case 2:\n    msg.payload = \"Finish\";\n    msg.status = \"green\";\n    msg.reset = \"blue\";\n    msg.partial_reading = \"grey\";\n    msg.full_reading = \"grey\";\n    msg.start_validation = true;\n    break;\n    case 3:\n    msg.payload = \"Deserialize failure\";\n    msg.status = \"red\";\n    msg.reset = \"grey\";\n    msg.partial_reading = \"grey\";\n    msg.full_reading = \"grey\";\n    msg.start_validation = false;\n    break;\n    case 4:\n    msg.payload = \"Reading failure\";\n    msg.status = \"red\";\n    msg.reset = \"blue\";\n    msg.partial_reading = \"red\";\n    msg.full_reading = \"red\";\n    msg.start_validation = true;\n    break;\n    default:\n    msg.payload = \"Reset for to start\";\n    msg.status = \"grey\";\n    msg.reset = \"grey\";\n    msg.partial_reading = \"grey\";\n    msg.full_reading = \"grey\";\n    msg.start_validation = true;\n    break;\n}\nflow.set(\"start_validation\", msg.start_validation);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 420,
+        "wires": [
+            [
+                "93cb96c0847884eb",
+                "10590a1b47fba99a",
+                "3a81aab28757e42e",
+                "d3f5e72272a97ccb"
+            ]
+        ]
+    },
+    {
+        "id": "93cb96c0847884eb",
+        "type": "ui_button",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "status",
+        "group": "0589f3d2aacf4aac",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "{{msg.payload}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.status}}",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "command",
+        "topicType": "str",
+        "x": 850,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "829e4de195a9e22f",
+        "type": "function",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "flow set",
+        "func": "flow.set(\"adress_min\", msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"adress_min\", 0);",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee63920251f3bfb8",
+        "type": "function",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "flow set",
+        "func": "flow.set(\"adress_max\", msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"adress_max\", 0);",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e7e9ae3cdc923f90",
+        "type": "debug",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "debug_input",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e5c33f5147eec3a9",
+        "type": "function",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "status 1 filter",
+        "func": "if(msg.payload.status == 1)\n{\n    msg.payload = msg.payload.data;\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 120,
+        "wires": [
+            [
+                "bb0e6f5de6ac3a9b"
+            ]
+        ]
+    },
+    {
+        "id": "8c0663bc61ecaa6e",
+        "type": "file",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "HEX file",
+        "filename": "C:\\eprom\\eprom.bin",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1160,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb0e6f5de6ac3a9b",
+        "type": "buffer-maker",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "name": "msg.payload",
+                "type": "uint8",
+                "length": 1,
+                "dataType": "msg",
+                "data": "payload"
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "x": 950,
+        "y": 120,
+        "wires": [
+            [
+                "8c0663bc61ecaa6e"
+            ]
+        ]
+    },
+    {
+        "id": "cb32e0deb61fe20c",
+        "type": "serial out",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "serial_output",
+        "serial": "e567094305c9d837",
+        "x": 1390,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "77ee7f1fa7bc00c6",
+        "type": "serial in",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "serial_input",
+        "serial": "e567094305c9d837",
+        "x": 90,
+        "y": 260,
+        "wires": [
+            [
+                "2eed74a86aa5a742",
+                "e7e9ae3cdc923f90"
+            ]
+        ]
+    },
+    {
+        "id": "a8d2915820c43740",
+        "type": "inject",
+        "z": "e4d2bd2ceb0aef03",
+        "name": "reset at start",
+        "props": [
+            {
+                "p": "payload.status",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 410,
+        "y": 420,
+        "wires": [
+            [
+                "7dc15c058dd34008"
+            ]
+        ]
+    }
+]
